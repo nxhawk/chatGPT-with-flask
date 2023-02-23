@@ -9,11 +9,16 @@
   <body>
     <form action="/home" method="POST">
       <label for="">input </label>
-      <input type="text" name="text" id="" />
+      <textarea type="text" name="text" id=""> </textarea>
       <button type="submit">submit</button>
-      {% if text|length > 1%}
-      <h1>{{text}}</h1>
-      {% endif %}
     </form>
+    <br />
+    <form action="/newchat" method="GET">
+      <button type="submit">New Chat</button>
+    </form>
+    <br />
+    {% if text|length > 1%}
+    <div>{{text}}</div>
+    {% endif %}
   </body>
 </html>
